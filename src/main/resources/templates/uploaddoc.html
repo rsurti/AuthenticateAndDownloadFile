@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Pass Key to Upload and view document</title>
+</head>
+<body>
+  <!--  <div>
+     <h3>Upload Multiple Files</h3>
+     <form id="uploadFiles" name="uploadFiles" method="post" th:action=@{/uploadFiles} encType="multipart/form-data">
+       <input type="file" name="files" multiple required />
+       <button type="submit">Submit</button>
+     </form>
+   </div> -->
+   
+   <div><h3>Use below key to view the doc</h3>
+   <h2 th:text="${user.key}"></h2>	
+   </div>
+   
+   <div>
+     <h4>Enter your key</h4>
+     <form id="matchKey" name="matchKey" method="post" th:action="@{/matchKey/}+${user.username}">     																	
+       <input type="text" name="key"/>
+       <button type="submit">View Doc</button>
+     </form>
+   </div>
+
+
+</body>
+</html>

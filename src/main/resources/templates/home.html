@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Test App</title>
+</head>
+<body>
+   <div>
+     <h4>Enter your name with Date of birth [e.g. Ajay20021980]</h4>
+     <form id="registerUser" name="registerUser" method="post" th:action=@{/registerUser}>
+       <input type="text" name="username"/>
+       <button type="submit">GetIn</button>
+     </form>
+   </div>
+   
+</body>
+</html>
